@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 function connect_db() {
     $host = 'localhost';
-    $db = 'fashion_mylishop';
+    $db = 'restaurant_vtiet27a';
     $user = 'root';
     $pass = '';
     $charset = 'utf8mb4';

@@ -2,7 +2,7 @@
 	$host = "localhost";
 	$user = "root";
 	$password = "";
-	$database = "fashion_mylishop";
+	$database = "restaurant_vtiet27a";
 
 	// Create connection
 	$conn = mysqli_connect($host, $user, $password, $database);

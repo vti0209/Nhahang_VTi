@@ -5,7 +5,7 @@ session_start();
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "fashion_mylishop";
+$database = "restaurant_vtiet27a";
 
 $conn = mysqli_connect($host, $user, $password, $database);
 mysqli_set_charset($conn, 'UTF8');
