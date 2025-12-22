@@ -87,9 +87,13 @@ $totalCategory = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM cate
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="logout.php" class="text-danger">
-                        <i class="bi bi-box-arrow-right"></i> Đăng xuất
-                    </a></li>
+                    <li><a href="profile.php"><i class="bi bi-person"></i> Thông tin</a></li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="logout.php" class="text-danger">
+                            <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>
