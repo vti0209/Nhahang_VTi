@@ -97,7 +97,7 @@ foreach ($alerts as $key => $msg) {
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="bi bi-person-circle"></i>
-                        <?= $_SESSION['admin'] ?? 'Administrator'; ?>
+                        <?= $_SESSION['admin'] ?? 'Admin VTi Restaurant'; ?>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -185,7 +185,7 @@ foreach ($alerts as $key => $msg) {
             </div>
             <div class="col-md-4">
                 <h4 class="text-success"><i class="bi bi-person"></i> Quản trị viên</h4>
-                <p><b>Admin:</b> <?= $_SESSION['admin'] ?? 'Administrator' ?></p>
+                <p><b>Admin:</b> <?= $_SESSION['admin'] ?? 'Admin VTi Restaurant' ?></p>
                 <p><i class="bi bi-calendar"></i> <?= date('d/m/Y') ?></p>
             </div>
         </div>

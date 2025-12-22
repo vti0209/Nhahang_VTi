@@ -83,7 +83,7 @@ foreach ($alerts as $k => $v) {
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="bi bi-person-circle"></i>
-                        <?= $_SESSION['admin'] ?? 'Administrator'; ?>
+                        <?= $_SESSION['admin'] ?? 'Admin VTi Restaurant'; ?>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">

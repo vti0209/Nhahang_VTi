@@ -53,7 +53,7 @@ if (isset($_GET['delete'])) {
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="bi bi-person-circle"></i>
-                        <?php echo $_SESSION['admin'] ?? 'Administrator'; ?>
+                        <?php echo $_SESSION['admin'] ?? 'Admin VTi Restaurant'; ?>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
