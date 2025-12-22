@@ -88,6 +88,7 @@ foreach ($alerts as $key => $msg) {
         <div class="collapse navbar-collapse" id="admin-navbar">
             <ul class="nav navbar-nav">
                 <li><a href="index.php"><i class="bi bi-house"></i> Trang chủ Admin</a></li>
+                <li><a href="order.php"><i class="bi bi-cart4"></i> Đơn hàng</a></li>
                 <li><a href="product.php"><i class="bi bi-box-seam"></i> Ẩm Thực</a></li>
                 <li class="active"><a href="category.php"><i class="bi bi-tags"></i> Danh mục</a></li>
                 <li><a href="promotion-back.php"><i class="bi bi-percent"></i> Khuyến mãi</a></li>

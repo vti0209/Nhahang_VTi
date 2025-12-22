@@ -110,7 +110,7 @@ CREATE TABLE `orders` (
   `status` tinyint(2) NOT NULL DEFAULT '0',
   `user_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
+ALTER TABLE `orders` ADD `order_code` VARCHAR(20) AFTER `id`;
 --
 -- Dumping data for table `orders`
 --
@@ -188,11 +188,19 @@ INSERT INTO `products` (`id`, `name`, `category_id`, `image`, `description`, `pr
 -- Table structure for table `product_order`
 --
 
+
 CREATE TABLE `product_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `order_id` int(11) DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `quantity` int(11) NOT NULL DEFAULT '1',
+  `price` float NOT NULL COMMENT 'Giá sản phẩm tại thời điểm mua',
+  `total_item` float GENERATED ALWAYS AS (quantity * price) STORED COMMENT 'Thành tiền món này',
+  `note` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Ghi chú cho món ăn (ví dụ: ít cay)',
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `product_id` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `product_order`
