@@ -84,6 +84,16 @@
                                     <?php
                                         }
                                     ?>
+                                     <div class="row" style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                                     <div class="col-md-12">
+                                    <h3 style="color: #f0ad4e; font-weight: bold; border-left: 5px solid #f0ad4e; padding-left: 15px;">
+                                        MÔ TẢ CHI TIẾT
+                                    </h3>
+                                    <div class="description-content" style="line-height: 1.8; font-size: 16px; margin-top: 20px;">
+                                        <?php 
+                                            // Hiển thị nội dung từ cột 'description' trong database
+                                            echo !empty($row['description']) ? nl2br($row['description']) : "Nội dung đang được cập nhật..."; 
+                                        ?>
                                     <hr>
                                     <div class="button-order">
                                         <div class="row">
@@ -99,12 +109,14 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     
                                     <p style="padding-top: 30px;">
                                         <span class ="fa fa-check-circle"></span>&nbsp;&nbsp;&nbsp;GIAO HÀNG TOÀN QUỐC<br>
                                         <span class ="fa fa-check-circle"></span> &nbsp;&nbsp;THANH TOÁN KHI NHẬN HÀNG<br>
                                         <span class ="fa fa-check-circle"></span>&nbsp;&nbsp; HOÀN ĐỔI NẾU SẢN PHẨM HƯ HẠI
                                     </p>
+                                
                                 </div><!-- /.col -->
                                 <!-- // Thông tin sản phẩm -->
                             </div><!-- /.row -->
