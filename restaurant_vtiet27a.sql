@@ -114,15 +114,10 @@ ALTER TABLE `orders` ADD `order_code` VARCHAR(20) AFTER `id`;
 --
 -- Dumping data for table `orders`
 --
-
+TRUNCATE TABLE `orders`;
 INSERT INTO `orders` (`id`, `total`, `date_order`, `status`, `user_id`) VALUES
 (1, 245000, '2018-01-25 18:30:30', 1, 12),
-(2, 225000, '2018-01-25 19:42:03', 1, 13),
-(3, 245000, '2018-01-25 19:45:13', 1, 14),
-(4, 245000, '2018-02-02 08:27:05', 1, 15),
-(5, 245000, '2018-02-02 08:29:12', 1, 15),
-(6, 235000, '2018-11-06 18:20:48', 0, 10),
-(7, 245000, '2018-11-06 18:23:37', 0, 15);
+(7, 245000, '2018-11-06 18:23:37', 1, 15);
 
 -- --------------------------------------------------------
 
@@ -204,8 +199,6 @@ CREATE TABLE `product_order` (
 -- 3. Cập nhật dữ liệu mẫu khớp với bảng orders của bạn
 INSERT INTO `product_order` (`order_id`, `product_id`, `quantity`, `price`) VALUES
 (1, 12, 1, 245000),
-(2, 14, 1, 225000),
-(6, 16, 1, 235000),
 (7, 17, 1, 245000);
 
 -- 4. Cập nhật lại VIEW để đảm bảo lệnh SELECT trong PHP không bị lỗi
@@ -308,8 +301,8 @@ CREATE TABLE reset_tokens (
 --
 TRUNCATE TABLE `users`;
 INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `email`, `address`, `phone`, `created`, `role`) VALUES
-(10, 'Van Tiet', 'van.tit', '49CDB4C2B576011E554669632DFBD7CC', 'tiet.ho@student.passerellesnumeriques.org', 'Đà Nẵng', '0397850200', NULL, 1),
-(15, 'Hello Lan', 'hilan', '5d41402abc4b2a76b9719d911017c592', 'Lannguyen26@gmail.com', 'Đà Nẵng', '123456789', NULL, 1);
+(29, 'Van Tiet', 'van.tit', '49CDB4C2B576011E554669632DFBD7CC', 'tiet.ho@gmail.com', 'Đà Nẵng', '0373532152', NULL, 1),
+(26, 'LanNguyen', 'hilan', '5d41402abc4b2a76b9719d911017c592', 'Lannguyen10@gmail.com', 'Đà Nẵng', '123456789', NULL, 1);
 
 -- --------------------------------------------------------
 
