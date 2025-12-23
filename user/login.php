@@ -1,7 +1,7 @@
 <?php
 	require_once('../model/connect.php');
 
-	if (isset($_GET['error'])) {
+	if (isset($_GET['error'])) { 
 		$error = "Vui lòng kiểm tra lại tài khoản hoặc mật khẩu của bạn!";
 	}
 	else {

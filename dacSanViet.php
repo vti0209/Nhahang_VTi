@@ -91,7 +91,7 @@
     <!-- partner -->
     <div class="container">
         <div class="title-product-main">
-            <h3 class="section-title">Ẩm thực Nổi bật</h3>
+            <h3 class="section-title">Đối tác đồng hành</h3>
         </div>
         <?php include("model/partner.php"); ?>
     </div>

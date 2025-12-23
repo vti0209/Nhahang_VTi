@@ -1,5 +1,5 @@
 <?php
-	$host = "localhost";
+	$host = "localhost"; // giả lập server tại máy tính cá nhân
 	$user = "root";
 	$password = "";
 	$database = "restaurant_vtiet27a";
