@@ -1,13 +1,13 @@
 <?php
 require_once('model/connect.php');
 $prd = 0;
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart'])) { //kiểm tra giỏ hàng nếu có thì đếm số lượng sản phẩm
     $prd = count($_SESSION['cart']);
 }
 
 // Search products
 $message = "Không thể tìm kiếm được, vui lòng kiểm tra lại!";
-if (isset($_POST['search'])) {
+if (isset($_POST['search'])) { //kiểm tra nút search nếu có thì thực hiện câu lệnh tìm kiếm
     $searchKeyword = $_POST['search'];
     $sql = "SELECT id,image,name,price FROM products WHERE (name LIKE '%$searchKeyword%')";
 } else {
@@ -19,9 +19,9 @@ if (isset($_POST['max_price']) && $_POST['max_price'] > 0) {
     $max = $_POST['max_price'];
     $sql .= " AND (price >= $min AND price <= $max)";
 }
-$resultSearch = mysqli_query($conn, $sql);
+$resultSearch = mysqli_query($conn, $sql); //thực hiện câu lệnh truy vấn và trả về kết quả
 if ($resultSearch) {
-    $totalnumber = mysqli_num_rows($resultSearch);
+    $totalnumber = mysqli_num_rows($resultSearch); //đếm số dòng trong kết quả trả về
 } else {
     $totalnumber = 0;
 }

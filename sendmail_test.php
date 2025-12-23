@@ -9,8 +9,8 @@ $mail = new PHPMailer(true);
 try {
     //Server settings
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com'; 
-    $mail->SMTPAuth   = true;
+    $mail->Host       = 'smtp.gmail.com'; // thiết lập máy chủ SMTP
+    $mail->SMTPAuth   = true; // bật xác thực SMTP
     $mail->Username   = 'hotrai84@gmail.com'; 
     $mail->Password   = 'ptjr uekf eptt uhgw'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;

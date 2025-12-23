@@ -77,6 +77,7 @@ $totalOrder    = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM orde
             <li><a href="product.php"><i class="bi bi-box-seam"></i> Ẩm Thực</a></li>
             <li><a href="category.php"><i class="bi bi-tags"></i> Danh mục</a></li>
             <li><a href="promotion-back.php"><i class="bi bi-percent"></i> Khuyến mãi</a></li>
+            <li><a href="user.php"><i class="bi bi-people"></i> Người dùng User</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -105,7 +106,7 @@ $totalOrder    = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM orde
     <p class="text-muted">Chào mừng bạn quay lại hệ thống quản trị.</p>
 
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="dash-box">
                 <i class="bi bi-cart-check text-info"></i>
                 <h2><?= $totalOrder ?></h2>
@@ -114,12 +115,12 @@ $totalOrder    = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM orde
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="dash-box">
                 <i class="bi bi-box-seam text-danger"></i>
                 <h2><?= $totalProduct ?></h2>
                 <p>Tất cả các Món ăn</p>
-                <a href="product.php" class="btn btn-danger btn-sm">Xem</a>
+                <a href="product.php" class="btn btn-danger btn-sm">Xem món</a>
             </div>
         </div>
 
@@ -153,6 +154,17 @@ $totalOrder    = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM orde
                 </h4>
                 <p>Khuyến mãi</p>
                 <a href="promotion-back.php" class="btn btn-warning btn-sm">Quản lý</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="dash-box">
+                <i class="bi bi-people text-warning"></i>
+                <h4>
+                    <img src="../images/logohong.png" alt="Logo" 
+                        style="max-width: 25%; height: 30%; vertical-align: middle;">
+                </h4>
+                <p>Tài khoản User list</p>
+                <a href="user.php" class="btn btn-danger btn-sm">Xem danh sách</a>
             </div>
         </div>
     </div>

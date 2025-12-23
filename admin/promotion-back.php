@@ -75,6 +75,7 @@ if (isset($_GET['ps'])) {
                 <li><a href="product.php"><i class="bi bi-box-seam"></i> Ẩm Thực</a></li>
                 <li><a href="category.php"><i class="bi bi-tags"></i> Danh mục</a></li>
                 <li class="active"><a href="promotion-back.php"><i class="bi bi-percent"></i> Khuyến mãi</a></li>
+                <li><a href="user.php"><i class="bi bi-people"></i> Người dùng User</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
