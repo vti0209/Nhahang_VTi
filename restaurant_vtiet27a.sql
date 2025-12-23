@@ -189,31 +189,39 @@ INSERT INTO `products` (`id`, `name`, `category_id`, `image`, `description`, `pr
 --
 
 
+
+
+-- 2. Tạo lại bảng với cấu trúc chuẩn InnoDB
 CREATE TABLE `product_order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL DEFAULT '1',
-  `price` float NOT NULL COMMENT 'Giá sản phẩm tại thời điểm mua',
-  `total_item` float GENERATED ALWAYS AS (quantity * price) STORED COMMENT 'Thành tiền món này',
-  `note` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Ghi chú cho món ăn (ví dụ: ít cay)',
-  PRIMARY KEY (`id`),
-  KEY `order_id` (`order_id`),
-  KEY `product_id` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `price` float DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `product_order`
---
+-- 3. Cập nhật dữ liệu mẫu khớp với bảng orders của bạn
+INSERT INTO `product_order` (`order_id`, `product_id`, `quantity`, `price`) VALUES
+(1, 12, 1, 245000),
+(2, 14, 1, 225000),
+(6, 16, 1, 235000),
+(7, 17, 1, 245000);
 
-INSERT INTO `product_order` (`product_id`, `order_id`, `quantity`) VALUES
-(12, 1, 1),
-(14, 2, 1),
-(17, 3, 1),
-(12, 4, 1),
-(17, 5, 1),
-(16, 6, 1),
-(17, 7, 1);
+-- 4. Cập nhật lại VIEW để đảm bảo lệnh SELECT trong PHP không bị lỗi
+DROP VIEW IF EXISTS `view_order_list`;
+CREATE VIEW `view_order_list` AS 
+SELECT 
+    o.id AS idOrder,
+    u.fullname, u.phone, u.email,
+    p.name AS nameProduct,
+    po.quantity,
+    o.status,
+    o.date_order AS dateOrder
+FROM orders o
+JOIN users u ON o.user_id = u.id
+JOIN product_order po ON o.id = po.order_id
+JOIN products p ON po.product_id = p.id;
 
 -- --------------------------------------------------------
 
