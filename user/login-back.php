@@ -15,7 +15,7 @@
         if ($rows > 0)
         {
             $_SESSION['username'] = $username; // Initializing Session,Khởi tạo Session cho username
-            while($row = mysqli_fetch_assoc($res)) {
+            while($row = mysqli_fetch_assoc($res)) { // Lấy id-user từ bảng users
                 $_SESSION['id-user'] = $row['id'];
             }
             // header("location:../view-cart.php?ls=success");
