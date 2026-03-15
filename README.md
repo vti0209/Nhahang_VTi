@@ -1,110 +1,136 @@
-🍽️ NhaHang_VTi – Restaurant Management Website
-📌 Introduction
+# 🍽️ NhaHang_VTi – Restaurant Management Website
 
-NhaHang_VTi is a simple restaurant management website developed using PHP and MySQL.
-The system allows users to view dishes, manage menu data, and interact with a basic restaurant database.
+## 📌 Introduction
+**NhaHang_VTi** is a simple restaurant management website built with **PHP and MySQL**.  
+The system allows users to browse the restaurant menu, view dish details, and manage restaurant data through a basic database system.
 
-This project was created as a practice project to improve web development and database integration skills.
+This project was created as a **practice project** to improve skills in **web development, database design, and backend integration**.
 
-🚀 Features
-User Side
+---
 
-View restaurant menu
+## 🚀 Features
 
-View dish information
+### 👤 User Side
+- View restaurant menu
+- View dish details
+- Browse food by categories
 
-Browse different categories of food
+### ⚙️ Admin / System
+- Manage food data
+- Retrieve data from MySQL database
+- Display dynamic content using PHP
 
-Admin / System
+---
 
-Manage food data
+## 🛠️ Technologies Used
 
-Connect and retrieve data from MySQL database
+- **PHP**
+- **MySQL**
+- **HTML**
+- **CSS**
+- **Bootstrap**
+- **JavaScript**
 
-Display dynamic content using PHP
+---
 
-🛠️ Technologies Used
+## 🗄️ Database
 
-PHP
+The project uses a **MySQL database**.
 
-MySQL
+Example tables include:
 
-HTML
+- `foods`
+- `categories`
+- `orders`
+- `customers`
 
-CSS
+You can import the database using **phpMyAdmin**.
 
-Bootstrap
+---
 
-JavaScript
+## ⚙️ Installation Guide
 
-🗄️ Database
+### 1️⃣ Clone the repository
 
-The project uses a MySQL database.
-
-Example tables may include:
-
-foods
-categories
-orders
-customers
-
-Import database using phpMyAdmin.
-
-⚙️ Installation
-1️⃣ Clone the repository
+```bash
 git clone https://github.com/vti0209/Nhahang_VTi.git
-2️⃣ Move project to server folder
+```
 
-Example (XAMPP):
+### 2️⃣ Move the project to your server folder
 
+Example using **XAMPP**:
+
+```
 htdocs/Nhahang_VTi
-3️⃣ Import database
+```
 
-Import the .sql file using phpMyAdmin.
+### 3️⃣ Import the database
 
-4️⃣ Configure database connection
+- Open **phpMyAdmin**
+- Import the provided `.sql` file
 
-Edit the database connection file (example):
+### 4️⃣ Configure database connection
 
+Edit the database connection file:
+
+```
 connect.php
+```
 
 Example configuration:
 
+```php
 $conn = mysqli_connect("localhost","root","","restaurant_db");
-5️⃣ Run project
+```
 
-Open browser:
+### 5️⃣ Run the project
 
+Open your browser and go to:
+
+```
 http://localhost/Nhahang_VTi
-📂 Project Structure
+```
+
+---
+
+## 📂 Project Structure
+
+```
 Nhahang_VTi
 │
-├── css
-├── js
-├── images
-├── Database
+├── css/
+├── js/
+├── images/
+├── Database/
 ├── data.php
 ├── product.php
 ├── connect.php
 └── README.md
-📸 Screenshots
+```
 
-You can add screenshots of the project interface here.
+---
+
+## 📸 Screenshots
+
+You can add screenshots of the interface here.
 
 Example:
 
+```
 screenshots/home.png
 screenshots/menu.png
-👨‍💻 Author
+```
 
-Ho Van Tiet
-Second-year student at Passerelles Numériques Vietnam (PNV)
+---
 
-Interested in:
+## 👨‍💻 Author
 
-Front-end Development
+**Ho Van Tiet**  
+Second-year student at **Passerelles Numériques Vietnam (PNV)**
 
-Web Development
+### Interests
+- Front-end Development
+- Web Development
 
-GitHub:
+🔗 GitHub:  
 https://github.com/vti0209
